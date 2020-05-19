@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="9px" viewBox="0 0 19 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="single-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="single-post:-Desktops---12-col" transform="translate(-357.000000, -269.000000)" stroke="#FFFFFF">
+            <g id="Group-4" transform="translate(366.500000, 273.500000) scale(-1, 1) translate(-366.500000, -273.500000) translate(357.000000, 269.000000)">
+                <path d="M0.5,4.5 L18.5,4.5" id="Line-4"></path>
+                <path d="M14.5,0.5 L18.5,4.5" id="Line-5"></path>
+                <path d="M14.5,4.5 L18.5,8.5" id="Line-5" transform="translate(16.500000, 6.500000) scale(1, -1) translate(-16.500000, -6.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
