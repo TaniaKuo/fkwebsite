@@ -1,0 +1,316 @@
+.header-box{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #0f0e0d;
+    box-shadow: 0 5px 15px -10px #111;
+    &.header-wrap {
+        padding: 0 70px;
+        height:173px;
+        & a.active{
+        color:$c-main;
+        }
+    }
+}
+
+
+.h-blank-space{
+    height:173px;
+}
+.logo {
+    order: 1;
+    width: 180px;
+    height: auto;
+    padding: 24px;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.item {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 24px;
+}
+
+.item:nth-of-type(n+3) {
+    order: 2;
+}
+
+@media all and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .item {
+        text-align: center;
+        border-bottom: 1px solid #111;
+    }
+}
+
+.arrival-date {
+    position: absolute;
+    width: 245px;
+    top: 20px;
+    right: 100px;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-size: $f-12;
+    align-items: center;
+    display: flex;
+}
+
+.arrival-date img {
+    width: 32px;
+    margin-right: 10px;
+}
+
+.arrival-date-info {
+    text-align: center;
+}
+
+.arrival-date-title {
+    font-size: $f-14;
+}
+
+.member-cart {
+    position: absolute;
+    padding: 24px;
+    right: 100px;
+    top: 100px;
+}
+
+.cart {
+    padding-right: 10px;
+}
+
+.cart svg.svg-icon {
+    margin-right: 5px;
+    margin-bottom:0px;
+}
+.log-in path{
+    fill:#1fb54f;
+}
+
+.cartbox,.member-box {
+    position: relative;
+}
+
+.cartbox:hover .dropmenu {
+    display: block;
+}
+
+.member-box:hover .dropmenu-member{
+    display:block;
+}
+.dropmenu-member button{
+    margin-bottom:10px;
+    &:last-child{
+    margin-bottom:0px;
+    }
+}
+.dropmenu{ 
+    min-width: 380px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    background: #0F0E0D;
+    border: 1px solid $c-main;
+    position: absolute;
+    z-index: 2;
+    right: 5px;
+    top: 30px;
+    font-size: $f-15;
+    color: #000;
+    display: none;
+}
+.dropmenu-member{
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    background: #181717;
+    border: 1px solid $c-main;
+    position: absolute;
+    z-index: 2;
+    right: -15px;
+    top: 30px;
+    font-size: $f-15;
+    color: #000;
+    display: none;
+
+    &:before{
+        content: " ";
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-color: transparent transparent $c-main transparent;
+    position: absolute;
+    top: -15px;
+    right: 16px;
+    z-index: 3;
+    }
+}
+
+
+
+.dropmenu:before {
+    content: " ";
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-color: transparent transparent $c-main transparent;
+    position: absolute;
+    top: -15px;
+    right: 16px;
+    z-index: 3;
+}
+/* 把沒有產品隱藏
+.no-prod {
+    display: none;
+}
+
+.cartbox:hover .dropmenu.no-prod {
+    display: none;
+}
+*/
+.cart-head {
+    background-color: #0F0E0D;
+    color: $c-main;
+    text-align: center;
+    font-size: $f-16;
+}
+.cart-box{
+    background-color: #fff;
+    margin:8px 8px 0 8px;
+}
+.cart-title {
+    background-color: $c-table;
+    font-size: $f-14;
+    color: #fff;
+}
+
+.cart-info-list {
+    border-bottom: 1px solid $c-table;
+}
+.cart-num{
+    color:$c-main;
+}
+
+
+/* ============== RWD-NAV  ============== */
+@media (min-width: 1200px) { 
+    .mobile-nav,.mobile-footer-nav{
+    display:none;
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+    .logo {
+        order: 1;
+        text-align: center;
+        min-width: 100px;
+    }
+    .member-cart{
+    padding:0px; 
+    }
+    .header-wrap a.item{
+    display:none;
+    }
+    .member-cart{
+    right:10px;
+    bottom:24px;
+    }
+    .cartbox:hover .dropmenu,.member-box:hover .dropmenu-member{
+    display: none;
+    }
+    .logo a{
+    display:block;
+    }
+    .cart .cart-num{
+    display:none;
+    }
+    a.arrival-date{
+    display:block;
+    }
+    .mobile-nav{
+    height:60px;
+    line-height:60px;
+    display:block;
+    background: #0f0e0d;
+    padding:0 10px;
+    border-top:1px solid $c-main;
+    border-bottom:1px solid $c-main;
+    text-align: center;
+    }
+    .arrival-date{
+    top:30px;
+    right: initial;
+    left: 10px;
+    width: 72px;
+    padding: 5px;
+    line-height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: initial;
+    display: inline-block;
+    }
+    .arrival-date-title{
+    font-size:$f-12;
+    }
+    .arrival-date-title span{
+    display:block;
+    
+    }
+    .arrival-date-info span.arrival-sub-tt{
+    display:none;
+    }
+    .mobile-footer-nav{
+    width:100%;
+    background:#000;
+    position:fixed;
+    bottom:0;
+    z-index:999;
+    }
+    .bt-btn a{
+    display:block;
+    width:100%;
+    padding:20px;
+    font-size:$f-18;
+    text-align:center;
+    }
+    .swiper-container{
+    margin-top:233px; //手機版header高度
+    }
+    .story-filter{
+    padding-top:233px //手機版header高度
+    }
+    .h-blank-space{
+    height:233px;
+    }
+    .footer{
+    padding-bottom:57px;
+    }
+ }
+
+ // Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .mobile-nav{
+    overflow: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    }
+}

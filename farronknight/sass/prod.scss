@@ -1,0 +1,327 @@
+.prodinfo-wrap {
+    font-size: $f-14;
+    margin-top: 20px;
+    padding: 40px 20px;
+    background: #000;
+    color: #fff;
+}
+
+.simplegallery div.content {
+    margin: 20px 0;
+}
+
+.simplegallery img {
+    width: 100%;
+}
+
+.thumb a {
+    display: block;
+}
+
+.imgbtn.active {
+    border: 2px solid $c-main;
+}
+
+.size-btn a {
+    border: 2px solid #fff;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 36px;
+    margin-right: 8px;
+    &:last-child {
+        margin-right: 0px;
+    }
+    &:hover {
+        border: 2px solid $c-main;
+    }
+    &.active {
+        border: 2px solid $c-main;
+        color: $c-main;
+    }
+}
+
+.btnwrap {
+    padding: 10px 0;
+}
+
+.btnwrap button {
+    width: 100%;
+}
+
+.btnwrap button:first-child {
+    margin-right: 10px;
+}
+
+.prod-promotion {
+    padding: 20px 0;
+    color: #fff;
+    font-size: $f-13;
+    & ul {
+        padding: 10px 0 0 20px;
+    }
+    & ul li {
+        position: relative;
+        list-style: none;
+    }
+    & ul li:before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: url(../images/Oval.png) no-repeat;
+        background-size: 10px 10px;
+        position: absolute;
+        left: -15px;
+        top: 5px;
+    }
+}
+
+.prod-subtt {
+    font-size: $f-14;
+    color: $c-main;
+}
+
+.prod-name {
+    color: $c-main;
+    font-size: $f-28;
+}
+
+.price {
+    font-size: $f-28;
+    color: $c-main;
+    padding: 10px 0;
+}
+
+//tab
+$third: 100%/2;
+
+
+
+.box {
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-flow: column wrap;
+
+    margin: 0 auto;
+}
+
+.tabset--nav {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 100%;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #6f6f6f;
+        bottom: 0;
+    }
+}
+
+.nav--item {
+    padding: 0 0 1.4em 0;
+    flex-basis: $third;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: $f-15;
+
+    cursor: pointer;
+}
+
+// the active tab marker
+.active--tab__marker {
+    height: 0.2em;
+    width: $third;
+    background-color: $c-main;
+    position: absolute;
+    bottom: 0;
+    transition: 0.24s;
+}
+
+.-is--active {
+    color: $c-main;
+}
+
+.nav--item:nth-of-type(1).-is--active~.active--tab__marker {
+    left: 0;
+}
+
+.nav--item:nth-of-type(2).-is--active~.active--tab__marker {
+    left: $third;
+}
+
+.nav--item:nth-of-type(3).-is--active~.active--tab__marker {
+    left: $third * 2;
+}
+
+// the tabset and content
+.tabset--content {
+    position: relative;
+    width: 200%;
+
+    flex-grow: 1;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    transition: 0.3s;
+}
+
+
+[data-active-tab="tab-1"] {
+    left: 0;
+}
+
+[data-active-tab="tab-2"] {
+    left: -100%;
+}
+
+[data-active-tab="tab-3"] {
+    left: -200%;
+}
+
+.tabset--section {
+    width: 100%;
+    padding: 40px 20px;
+    color: white;
+    letter-spacing: 0.5em;
+
+    &:nth-of-type(1) {
+        background-color: none;
+    }
+    &:nth-of-type(2) {
+        background-color: none;
+    }
+}
+
+.tabset--info {
+    max-width: 800px;
+    margin: 0 auto;
+    & p {
+        margin: 2em auto;
+    }
+    & img {
+        width: 100%;
+    }
+}
+
+.prod-wrap {
+    margin-top: 50px;
+}
+
+.rel-prod-wrap {
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+
+.select-tt {
+    padding: 10px 0;
+    & a{
+    text-decoration: underline;
+    }
+}
+
+//數量增減按鈕
+.quantity-box {
+    padding-bottom: 10px;
+}
+
+.qty {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border: 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background: none;
+    color: #fff;
+}
+
+
+input.qtyplus {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+input.qtyminus {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+
+
+
+/* ============== 選擇尺寸 CHECKBOX  ============== */
+
+section {
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.priority {
+    display: table-cell;
+    table-layout: fixed;
+    width: 33%;
+    cursor: pointer;
+}
+
+.priority input.radio-size[type="radio"] {
+    display: none;
+}
+
+.priority input.radio-size[type="radio"]+span {
+    display: block;
+    border: 2px solid #fff;
+    vertical-align: top;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.priority input.radio-size[type="radio"]:checked+span {
+    border: 2px solid #F2D57F;
+    color: #F2D57F;
+}
+
+.priority span {
+    margin-right: 8px;
+}
+
+.priority:last-of-type>span {
+    margin-right: 0;
+}
+
+.priority+.priority>span {
+    border-left: none;
+}
+
+
+
+
+/* ============== RWD  ============== */
+
+@media (max-width: 991.98px) {
+    .prod-wrap {
+        background: #000;
+        margin-top: 15px;
+    }
+}

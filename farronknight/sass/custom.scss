@@ -1,0 +1,10 @@
+// 這份檔案是整合所有分開CSS元件檔案
+// 全區域設定
+@import "variable.scss";
+@import "main.scss";
+// 頁面組件
+@import "header.scss";
+// 讀入產品頁
+@import "prod.scss";
+// 讀入RWD
+

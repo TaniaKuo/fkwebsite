@@ -1,0 +1,1 @@
+function hideShowPsw(){"password"===demoInput.type?(demoInput.type="text",demoImg.src="images/novisible.png"):(demoInput.type="password",demoImg.src="images/visible.png")}var demoImg=document.getElementById("psw_img"),demoInput=document.getElementById("demo_input");
